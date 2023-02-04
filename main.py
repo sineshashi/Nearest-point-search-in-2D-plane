@@ -41,12 +41,12 @@ class BinaryTree:
             else:
                 self.right = BinaryTree(val, other)
 
-    def pre_order(self, node):
+    def in_order(self, node):
         if node is None:
             return
-        self.pre_order(node.left)
+        self.in_order(node.left)
         print(node.val)
-        self.pre_order(node.right)
+        self.in_order(node.right)
     
 
 '''
@@ -64,7 +64,7 @@ for (x, y) in arr:
     else:
         long_binary_tree.insert(x, y)
 
-# long_binary_tree.pre_order(long_binary_tree)
+# long_binary_tree.in_order(long_binary_tree)
 
 visited = set()
 def x_range_search(d: float, min_x: int, max_x: int, point, node:Optional[BinaryTree]=long_binary_tree):
